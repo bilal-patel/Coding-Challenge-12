@@ -17,3 +17,16 @@ canvas.onmousemove = (e) => {
 
 canvas.onmouseup = () => drawing = false; //using mouse method 
 
+// task3 - Implement Shape Drawing Logic
+// Draw the selected shape 
+function drawShape(x, y) {
+    ctx.beginPath();// start eith nothing
+    if (selectedTool === 'line') ctx.moveTo(startX, startY), 
+    ctx.lineTo(x, y); // use if else for shape drawing
+    else if (selectedTool === 'rectangle') 
+        ctx.rect(startX, startY, x - startX, y - startY); // draw rec
+    else ctx.arc(startX, startY, 
+        Math.hypot(x - startX, y - startY), 0, 2 * Math.PI); // draw cir
+    ctx.stroke();
+}
+
