@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Application</title>
+    <style>
+#canvas {
+    border: 1px solid #000;
+    cursor: crosshair;}
+    </style>
+</head>
+<body>
+    <h1>Drawing Tool</h1>
+<!-- choose shape-->
+    <label>
+        <input type="radio" name="shape" value="line" checked> Line
+    </label>
+    <label>
+        <input type="radio" name="shape" value="rectangle"> Rectangle
+    </label>
+    <label>
+        <input type="radio" name="shape" value="circle"> Circle
+    </label>
+
+    <label> 
+        Choose Color: <input type="color" id="color-picker" value="#000000">
+    </label>
+
+    <!-- Button to clear canvas -->
+    <button id="clear-button">Clear Canvas</button>
+
+    <!-- Canvas -->
+    <canvas id="canvas" width="650" height="400"></canvas>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
